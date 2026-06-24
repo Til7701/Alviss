@@ -9,7 +9,7 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>core</artifactId>
+    <artifactId>surefire-provider</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,10 +17,15 @@
             <artifactId>api</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>de.til7701.alviss</groupId>
+            <artifactId>core</artifactId>
+            <version>${revision}</version>
+        </dependency>
 
         <dependency>
-            <groupId>org.jspecify</groupId>
-            <artifactId>jspecify</artifactId>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-api</artifactId>
         </dependency>
 
         <dependency>
@@ -43,5 +48,14 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-invoker-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

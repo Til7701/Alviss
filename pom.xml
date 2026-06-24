@@ -11,16 +11,23 @@
     <modules>
         <module>api</module>
         <module>core</module>
+        <module>surefire-provider</module>
     </modules>
 
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>26</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <argLine/>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-api</artifactId>
+                <version>3.5.5</version>
+            </dependency>
             <dependency>
                 <groupId>org.jspecify</groupId>
                 <artifactId>jspecify</artifactId>
